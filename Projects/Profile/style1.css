@@ -1,0 +1,109 @@
+body{
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1{
+    font-weight: 100;
+    margin-bottom: 0px;
+}
+
+p{
+    font-weight: lighter;
+    font-size: 1.5rem;
+    margin-top: 0px;
+}
+
+main{
+    background-color: #ff3cac;
+    background-image: linear-gradient(
+        225deg,
+        #ff3cac 5%,
+        #784ba0 50%,
+        #2b86c5 100%
+    );
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.bg{
+    background: white;
+    padding: 80px;
+    border-radius: 5%;
+}
+
+.fade{
+    opacity: 0s;
+    animation: fadein 1s 1s ease-in-out forwards;
+    text-align: center;
+    > img{
+        border-radius: 35px;
+        width: 300px;
+        height: auto;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+}
+
+.icons{
+    opacity: 0;
+    border-radius: 35px;
+    background: rgb(245,243,245);
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    gap: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    animation: jumpIn 1s 2s ease-in-out forwards;
+}
+
+.icon a{
+    background: white;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    > img{
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+    }
+}
+
+.icon:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
+}
+
+@keyframes fadein{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes jumpIn{
+    0%{
+        opacity: 0;
+        transform: scale(1);
+    }
+    50%{
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
